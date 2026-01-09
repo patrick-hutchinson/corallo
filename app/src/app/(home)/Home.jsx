@@ -14,10 +14,16 @@ export default function Home({ site, home }) {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <header className={styles.header}>
-          <DownloadCatalogue file={home.catalogue} />
-          <a href={`mailto:${site.email}`}>CONTACT ME</a>
-        </header>
+        {!isMobile && (
+          <header className={styles.header}>
+            <DownloadCatalogue file={home.catalogue} className={styles.link} />
+            <a href={`mailto:${site.email}`} className={styles.link}>
+              CONTACT ME
+            </a>
+          </header>
+        )}
+
+        {isMobile && <DownloadCatalogue file={home.catalogue} className={styles.link} />}
 
         <div className={styles.animation}>
           <video autoPlay muted playsInline loop>
@@ -25,6 +31,12 @@ export default function Home({ site, home }) {
           </video>
         </div>
         <Text className={styles.introduction} text={home.introduction} />
+
+        {isMobile && (
+          <a href={`mailto:${site.email}`} className={styles.link}>
+            CONTACT ME
+          </a>
+        )}
       </main>
     </div>
   );

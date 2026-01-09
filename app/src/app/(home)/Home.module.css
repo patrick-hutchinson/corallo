@@ -6,20 +6,25 @@
   min-height: 100dvh;
   display: grid;
   grid-template-rows:
-    auto /* header */
+    auto /* catalogue */
     1fr /* video */
-    auto; /* text */
+    auto /* text */
+    auto; /* contact */
   padding: var(--padding);
+  gap: var(--padding);
 }
 
 header.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
 
-  color: var(--red);
-
+.link {
+  color: var(--red) !important;
   text-transform: uppercase;
+
+  text-align: center;
 }
 
 .animation {
@@ -39,4 +44,16 @@ header.header {
 .introduction {
   color: var(--green);
   text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .main {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows:
+      auto /* header */
+      1fr /* video */
+      auto; /* text */
+    padding: var(--padding);
+  }
 }

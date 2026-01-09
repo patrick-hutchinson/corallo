@@ -13,9 +13,9 @@ export const metadata = {
   title: site.title,
   description: site.description,
   icons: {
-    icon: "favicon.ico",
-    shortcut: "favicon-16x16.png",
-    apple: "apple-touch-icon.png",
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/favicon-16x16.png",
+    apple: "/favicon/apple-touch-icon.png",
   },
   openGraph: {
     title: site.title,
