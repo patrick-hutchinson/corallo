@@ -1,0 +1,42 @@
+.page {
+  min-height: 100dvh;
+}
+
+.main {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows:
+    auto /* header */
+    1fr /* video */
+    auto; /* text */
+  padding: var(--padding);
+}
+
+header.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  color: var(--red);
+
+  text-transform: uppercase;
+}
+
+.animation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.animation video {
+  height: 100%;
+  width: auto;
+  max-width: 100dvw;
+  object-fit: contain;
+  position: absolute;
+}
+
+.introduction {
+  color: var(--green);
+  text-align: center;
+}
