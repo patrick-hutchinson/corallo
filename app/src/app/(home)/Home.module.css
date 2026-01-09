@@ -25,6 +25,7 @@ header.header {
   text-transform: uppercase;
 
   text-align: center;
+  font-size: var(--font-size-display);
 }
 
 .animation {

@@ -8,12 +8,14 @@
 
 :root {
   --font-size-body: 15px;
+  --font-size-display: 25px;
   --line-height-body: 1;
 }
 
 @media screen and (min-width: 769px) {
   :root {
     --font-size-body: 28px;
+    --font-size-display: 28px;
     --line-height-body: 1;
   }
 }
